@@ -4,7 +4,7 @@ This folder contains the **meta-agent architecture**: a self-managing system of 
 
 ---
 
-## The 6 Components
+## The 6 Meta-Agent Components
 
 | Agent | Role |
 |---|---|
@@ -14,6 +14,18 @@ This folder contains the **meta-agent architecture**: a self-managing system of 
 | [Evolution Agent](agent_evolution.agent.md) | Drives ongoing improvements and refactoring |
 | [Capability Registry](capability_registry.agent.md) | Centralized index of what every agent can do |
 | [Knowledge Sync](knowledge_sync.agent.md) | Propagates changes across the system |
+
+## Domain Agents
+
+| Agent | Role |
+|---|---|
+| [Product Agent](product_agent.agent.md) | Turns raw ideas into clear product direction; defines target user, problem, value proposition, and MVP |
+| [Architect Agent](architect.agent.md) | Designs system architecture, chooses tech stack, defines API contracts and folder structure, writes ADRs — pushes for boring, reliable architecture |
+| [Frontend Agent](frontend_agent.agent.md) | Builds the user-facing layer: React/Next.js components, screens, forms, client-side state, API integration, accessibility, and UI quality |
+| [Backend Agent](backend.agent.md) | Implements APIs, database schemas, auth, service layer, input validation, and integration tests |
+| [Reviewer/QA Agent](reviewer_qa.agent.md) | Reviews code, verifies acceptance criteria, writes test plans, generates Playwright tests, and issues QA sign-offs |
+| [Growth & Marketing Agent](growth_marketing.agent.md) | Defines positioning, writes landing page copy, maps acquisition channels, drafts launch content, and produces SEO and email strategies |
+| [Documentation Agent](documentation.agent.md) | Creates and maintains all project docs (README, ARCHITECTURE, API, RUNBOOK, ADRs) and all agent definitions; keeps docs synchronized with the current state of the codebase and agent system |
 
 ---
 
@@ -111,10 +123,7 @@ Start by identifying which use case applies, then direct your prompt to the appr
 
 **Entry point:** Agent Creator
 
-**Example prompts:**
-- `"Create an agent that handles user authentication flows"`
-- `"I need a new agent responsible for rate-limiting API calls — design it"`
-- `"We're missing something that monitors agent health. Define it."`
+**Structured prompt (recommended):** Use `/create-agent <agent-name — purpose>` — defined in [create-agent.prompt.md](../prompts/create-agent.prompt.md). It auto-injects the agency plan and architecture guidelines, checks the Capability Registry for conflicts, maps interactions, enforces the 9-section template, and models subagent contracts.
 
 **What happens next:** Creator checks overlap with Capability Registry → if no conflict, calls Reviewer → on approval, notifies Evolution Agent → Knowledge Sync broadcasts activation to the system.
 
@@ -169,6 +178,21 @@ Start by identifying which use case applies, then direct your prompt to the appr
 - `"We no longer need the rate-limiter agent. How do we safely remove it?"`
 
 **What happens next:** Coordinator approves the decision → Capability Registry archives the agent's capabilities → Knowledge Sync broadcasts the deprecation to all dependent agents.
+
+---
+
+### Use Case 6 — Document the Project or the Agent System
+
+**Entry point:** Documentation Agent
+
+**Example prompts:**
+- `"Update the README to reflect the latest features"`
+- `"Write an ADR for the decision to use Drizzle instead of Prisma"`
+- `"Sync all agent docs — some agents have changed and their definitions are stale"`
+- `"Create the API docs from the current backend routes"`
+- `"We added a new agent. Add it to README_agents.md and AGENTS.md"`
+
+**What happens next:** Documentation Agent reads the relevant source files, identifies gaps or outdated content, then creates or updates the appropriate doc files. It does not orchestrate other agents — it documents the work done by them.
 
 ---
 

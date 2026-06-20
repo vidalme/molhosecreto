@@ -572,14 +572,15 @@ Do **not** start with 15 autonomous agents talking to each other. Start with thi
 3. **Frontend Agent**
 4. **Backend Agent**
 5. **Reviewer/QA Agent**
+6. **Growth & Marketing Agent**
 
 Then add:
 
-6. DevOps Agent
-7. Marketing Agent
-8. Documentation Agent
-9. Security Agent
-10. Analytics Agent
+7. DevOps Agent
+8. Marketing Agent
+9. Documentation Agent
+10. Security Agent
+11. Analytics Agent
 
 This avoids building the “AI company” before building the actual SaaS.
 
