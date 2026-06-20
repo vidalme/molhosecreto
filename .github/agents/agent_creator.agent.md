@@ -1,3 +1,9 @@
+---
+name: agent-creator
+description: Designs and generates new agents based on system needs. Creates agents using standard templates, defines scope, suggests sub-agents, and triggers validation and coordination workflows.
+argument-hint: Agent purpose, desired capabilities, and any constraints.
+---
+
 # Agent: Agent Creator
 
 ## Role

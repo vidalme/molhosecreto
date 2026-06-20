@@ -1,3 +1,9 @@
+---
+name: knowledge-sync
+description: Ensures all active agents are aware of relevant system changes. Propagates capability and structural updates to affected agents and tracks sync delivery status.
+argument-hint: A change event from Capability Registry or refactoring instructions from Evolution Agent.
+---
+
 # Agent: Knowledge Sync
 
 ## Role

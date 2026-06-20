@@ -1,3 +1,9 @@
+---
+name: capability-registry
+description: Maintains a centralized index of all agent capabilities. Tracks capabilities, prevents duplication, enables capability discovery, and responds to overlap queries.
+argument-hint: Capability registration payload, a lookup query, or an agent deprecation notice.
+---
+
 # Agent: Capability Registry
 
 ## Role

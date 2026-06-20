@@ -1,3 +1,9 @@
+---
+name: agent-reviewer
+description: Validates quality, completeness, and compliance of all agents before approval. Ensures template compliance and clarity of responsibilities.
+argument-hint: An agent definition file to review and validate.
+---
+
 # Agent: Agent Reviewer
 
 ## Role
