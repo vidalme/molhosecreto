@@ -11,7 +11,7 @@ You are creating a new agent for this system. Follow the steps below exactly and
 
 Read and internalize these files before doing anything else:
 
-- [Agency Plan](../../prompts/agency_plan.md) — the product roadmap and planned agent roster
+- [Agency Plan](../../plan/agency_plan.md) — the product roadmap and planned agent roster
 - [Architecture Guidelines](../agents/README_agents.md) — design rules, workflows, and interaction model
 - [Capability Registry](../agents/capability_registry.agent.md) — the index of all currently registered capabilities
 
@@ -21,7 +21,7 @@ The agent to create is: **$ARGUMENTS**
 
 ## Step 1 — Locate the agent in the plan
 
-Read [agency_plan.md](../../prompts/agency_plan.md) and find the entry for `$ARGUMENTS`.
+Read [agency_plan.md](../../plan/agency_plan.md) and find the entry for `$ARGUMENTS`.
 
 Extract:
 - The agent's stated purpose in the product roadmap
